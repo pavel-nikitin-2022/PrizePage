@@ -1,0 +1,12 @@
+declare module '*.png';
+declare module '*.gif';
+declare module '*.svg';
+declare module '*.mp4';
+declare module '*.mov';
+declare module '*.webm';
+declare module 'meanderer';
+declare module 'animejs/lib/anime.es.js';
+declare module 'javascript-gif/Gif.js';
+declare module 'javascript-gif/Player.js';
+declare module 'libgif';
+declare module '@mvarble/react-gif';
