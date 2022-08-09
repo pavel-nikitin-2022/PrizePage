@@ -6,33 +6,29 @@ export const CLOSE_CONTENT = {
 
 export const OPEN_CONTENT = {
     prize: {
+        duration: 700,
+        delay: 300,
         translateX: {
-            duration: 700,
-            delay: 300,
             value: -50
         },
         translateY: {
-            duration: 700,
-            delay: 300,
             value: '-25vh',
         },
         scale: {
-            duration: 700,
-            delay: 300,
             value: 1,
         }
     },
     image: {
+        duration: 500,
+        delay: 400,
         opacity: {
-            duration: 500,
-            delay: 400,
             value: 1,
         }
     },
     content: {
+        duration: 600,
+        delay: 1000,
         opacity: {
-            duration: 600,
-            delay: 1000,
             value: 1,
         }
     }

@@ -14,6 +14,11 @@ const types = {
     common: {gradient: 'Rare', text: 'Обычная'}
 };
 
+/**
+ * Градиентный текст(подпись)
+ * @param props - свойства приза
+ * @param props.type - какой текст и градиент использовать
+ */
 function GradientText(props: {type: 'legendary' | 'rare' | 'common'}): JSX.Element {
     let state = types[props.type];
 

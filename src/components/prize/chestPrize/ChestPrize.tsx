@@ -1,4 +1,4 @@
-import { Content, Image, HeaderCard, Header, Panel } from './PriseStyle';
+import { Content, Image, HeaderCard, Header, Panel } from './PrizeStyle';
 import BorderedText from './border';
 import React from 'react';
 import Text from './gradientText';
@@ -17,7 +17,13 @@ declare type card = {
     anime: boolean,
 };
 
-function CardBlock(
+/**
+ * Приз вылетающий из сундука
+ * @param props - свойства приза
+ * @param props.card - карточка которая должна вылететь
+ * @param props.anime - state переменная обозн должен ли блок отрыться/закрыться
+ */
+function ChestPrize(
     { card, anime }:
         {
             card: card,
@@ -67,4 +73,4 @@ function CardBlock(
     );
 }
 
-export default CardBlock;
+export default ChestPrize;

@@ -3,6 +3,11 @@ import anime from 'animejs';
 import png from '../../../img/Rare.png';
 import png2 from '../../../img/Legendary.png';
 
+/**
+ * Освещение для фона
+ * @param props - свойства
+ * @param props.type - определяет цвет освещения
+ */
 function IlluminatePNG(props: { type: 'legendary' | 'rare'}): JSX.Element {
     const svgRef = React.useRef<HTMLImageElement>(null);
 

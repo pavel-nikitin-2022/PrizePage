@@ -3,6 +3,11 @@ import anime from 'animejs/lib/anime.es.js';
 import Illuminate from './illuminate';
 import Panel  from './GradientBack';
 
+/**
+ * Создает шаблон для анимации прозрачности
+ * @param ref - ссылка на анимируемый объект
+ * @param props.anime - state переменная обозн должен ли блок отрыться/закрыться
+ */
 function Animate(ref: string, opacity: number): any {
     return (
         anime({
@@ -15,6 +20,12 @@ function Animate(ref: string, opacity: number): any {
     );
 }
 
+/**
+ * Система панелек для создания динамически менающегося градиента
+ * @param props - свойства
+ * @param props.backFilter - state переменная ответственная за отображение конкретного фона
+ * @param props.backImage - задний фон поверх которого накладваются фильтры
+ */
 function FilterBack(
     props: {
         backFilter: string

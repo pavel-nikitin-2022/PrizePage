@@ -1,11 +1,18 @@
 import React from 'react';
 import Chest from './Chest';
 import Panel from './background/Background';
-import CardBlock from './chestPrise/ChestPrise';
+import CardBlock from './chestPrize/ChestPrize';
 
 let index = 0;
 
-const App = ({
+/**
+ * Страница с сундука с призом
+ * @param props - свойства страницы
+ * @param props.backImage - задний фон страницы
+ * @param props.video - видеофайл с сундуком
+ * @param props.cards - массив с призовыми карточками
+ */
+const Prize = ({
     backImage,
     video,
     cards,
@@ -15,7 +22,7 @@ const App = ({
     cards: any[]
 }) => {
 
-    const [backFilter, setbackFilter] = React.useState('common');
+    const [backFilter, setBackFilter] = React.useState('common');
     const [animateChest, setAnimateChest] = React.useState('');
     const [animatePrise, setAnimatePrise] = React.useState(false);
 
@@ -24,7 +31,7 @@ const App = ({
 
         if (!animateChest) {
             setAnimateChest('start');
-            setbackFilter(cards[index].rarity);
+            setBackFilter(cards[index].rarity);
             setAnimatePrise(true);
         }
 
@@ -32,11 +39,11 @@ const App = ({
             setAnimatePrise((prevState) => !prevState)
             setTimeout(() => {
 
-                if (index + 1 == cards.length) setbackFilter('none');
+                if (index + 1 == cards.length) setBackFilter('none');
 
                 else {
                     index++
-                    setbackFilter(cards[index].rarity);
+                    setBackFilter(cards[index].rarity);
                     setAnimateChest('card' + index);
                     setAnimatePrise(true);
                 }
@@ -60,4 +67,4 @@ const App = ({
     );
 }
 
-export default React.memo(App);
+export default React.memo(Prize);

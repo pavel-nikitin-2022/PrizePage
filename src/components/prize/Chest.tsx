@@ -8,6 +8,13 @@ const Anim = styled.video`
     z-index: 10;
 `;
 
+/**
+ * Cундук
+ * @param props - свойства сундука
+ * @param props.video - видеофайл сундука
+ * @param props.animate - state пременная из Prize обозначает какую анимацию проиграет сундук
+ * @returns {JSX.Element} Возвращает DOM элемент сундук
+ */
 function Chest(props: { video: string, animate: string }): JSX.Element {
     const refChest = React.useRef<HTMLVideoElement>(null)
 

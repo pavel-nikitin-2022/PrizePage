@@ -42,7 +42,7 @@ const Legendary = styled.div`
     align-items: center;
 `;
 
-function Back(
+function GradientBack(
     props: {
         type: ('common' | 'rare' | 'legendary' | 'image'),
         backImage?: string,
@@ -73,4 +73,4 @@ function Back(
     );
 }
 
-export default React.memo(Back);
+export default React.memo(GradientBack);
